@@ -74,10 +74,12 @@ h1, h2, h3, h4 {
 }
 a {
   color: var(--link-col);
+  text-decoration: none;  /* no underline */
 }
 a:hover,
 a:focus {
   color: var(--hover-col);
+  text-decoration: underline;  /* underline when hovering */
 }
 blockquote {
   color: var(--mid-col);
@@ -95,6 +97,7 @@ hr.small {
   border-width: 0.25rem;
   border-color: inherit;
   border-radius: 0.1875rem;
+  opacity: 0.65;
 }
 
 /* fix in-page anchors to not be behind fixed header */
@@ -264,12 +267,12 @@ img {
 }
 
 @media (min-width: 1200px) {
-  .navbar-custom .nav-item.dropdown:hover {
+  .navbar-custom .nav-link.dropdown-toggle:hover {
     background: rgba(0, 0, 0, 0.1);
   }
 }
 
-.navbar-custom .nav-item.dropdown.show {
+.navbar-custom .nav-link.dropdown-toggle.show {
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -328,7 +331,7 @@ img {
     padding: 0.675rem 0 0.675rem 1rem;
   }
 
-  .navbar-custom .nav-item.dropdown.show {
+  .navbar-custom .nav-link.dropdown-toggle.show {
     background: rgba(0, 0, 0, 0.2);
   }
 
